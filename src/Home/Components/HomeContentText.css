@@ -1,0 +1,18 @@
+.HomeContentText-Container {
+
+    background-color: rgba(225, 225, 225, 0.864);
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 10px;
+
+}
+
+h1 {
+    padding: 10px;
+}
+
+p {
+    padding-left: 20px;
+}

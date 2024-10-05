@@ -1,0 +1,20 @@
+.user-catList {
+
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.user-listContainer {
+
+    background-color: rgba(225, 225, 225, 0.864);
+    padding: 10px;
+    border-radius: 10px;
+
+    width: 1100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 10px;
+
+
+}

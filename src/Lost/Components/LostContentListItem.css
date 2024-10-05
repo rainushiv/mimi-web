@@ -1,0 +1,11 @@
+.Lost-Item {
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.Lost-Item :hover {
+
+    size: 10%;
+}

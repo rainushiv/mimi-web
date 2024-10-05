@@ -1,0 +1,28 @@
+.user-Container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 21%;
+
+    align-items: center;
+
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: rgba(225, 225, 225, 0.864)
+}
+
+
+
+.user-CatContainer {
+
+    display: flex;
+}
+
+.profile-ContentContainer {
+
+    display: flex;
+    gap: 1.5rem;
+}

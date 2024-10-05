@@ -1,0 +1,15 @@
+.authform_container {
+
+    width: 20rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(225, 225, 225, 0.864);
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 15px;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
+    margin-top: 20px;
+}

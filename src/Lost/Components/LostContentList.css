@@ -1,0 +1,28 @@
+.LostContent-List {
+
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.LostContentList-Container {
+
+    background-color: rgba(225, 225, 225, 0.864);
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+
+    width: 1100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 10px;
+
+
+}
+
+.LostList {
+    overflow-y: scroll;
+    height: 300px;
+
+
+}

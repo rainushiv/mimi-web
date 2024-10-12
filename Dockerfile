@@ -1,11 +1,13 @@
 FROM node:alpine AS build
 
-
 WORKDIR /react-app
 
 COPY package.json . 
 
 RUN npm install
+
+ENV REACT_APP_MIMI_API_KEY=mimi.shivalry.dev
+
 
 COPY . .
 

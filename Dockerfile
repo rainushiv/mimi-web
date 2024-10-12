@@ -8,7 +8,6 @@ RUN npm install
 
 ENV REACT_APP_MIMI_API_KEY=mimi.shivalry.dev
 
-
 COPY . .
 
 RUN npm run build

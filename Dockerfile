@@ -1,17 +1,25 @@
-FROM node:alpine AS development
+FROM node:alpine AS build
 
-ENV NODE_ENV development
 
 WORKDIR /react-app
 
 COPY package.json . 
+
 RUN npm install
 
 COPY . .
 
+RUN npm run build
+
+FROM node:18-alpine
+
+WORKDIR /react-app
+
+COPY --from=build /app/build ./build
+
 RUN npm install -g serve
 
-EXPOSE 3000
-
 # Starting our application
-CMD ["serve","-s","npm","start"]
+CMD ["serve","-s","build"]
+
+EXPOSE 3000

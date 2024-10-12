@@ -22,5 +22,4 @@ RUN npm install -g serve
 # Starting our application
 CMD ["serve","-s","build"]
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 3000

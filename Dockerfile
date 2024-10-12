@@ -6,9 +6,9 @@ COPY package.json .
 
 RUN npm install
 
-ARG ENV REACT_APP_MIMI_API_KEY=mimi.shivalry.dev
+ARG MIMI_API_URL
 
-ENV REACT_APP_MIMI_API_KEY=mimi.shivalry.dev
+ENV REACT_APP_MIMI_API_URL=${MIMI_API_URL}
 
 COPY . .
 

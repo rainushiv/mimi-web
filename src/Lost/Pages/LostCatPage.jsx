@@ -1,7 +1,7 @@
 import Header from "../../Shared/Components/Header";
 import { useParams } from 'react-router-dom'
 import LostCatMap from "../Components/LostCatMap";
-
+import { API_URL } from '../../Shared/hooks/config'
 import useHttpClient from "../../Shared/hooks/HttpHook";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Shared/context/authContext";
@@ -16,7 +16,7 @@ export default function LostCatPage(props) {
         const fetchCat = async () => {
             try {
 
-                const responseData = await sendRequest(`http://localhost:4000/api/lost/${lostCatId}`)
+                const responseData = await sendRequest(`${API_URL}/api/lost/${lostCatId}`)
 
                 setCurrentCat(responseData.lostCat)
 

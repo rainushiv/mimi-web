@@ -5,6 +5,7 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
+import { API_URL } from '../../Shared/hooks/config'
 
 export default function OverflowCard({ name, id, image, place }) {
     return (
@@ -12,7 +13,7 @@ export default function OverflowCard({ name, id, image, place }) {
             <CardOverflow>
                 <AspectRatio ratio="1.75">
                     <img
-                        src={`http://localhost:4000/${image}`}
+                        src={`${API_URL}/${image}`}
                         loading="lazy"
                         alt=""
                     />

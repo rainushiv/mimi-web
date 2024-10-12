@@ -4,6 +4,7 @@ import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
+import { API_URL } from '../../Shared/hooks/config';
 
 export default function RowCard({ name, place, image }) {
     return (
@@ -11,7 +12,7 @@ export default function RowCard({ name, place, image }) {
             <CardOverflow>
                 <AspectRatio ratio="1" sx={{ width: 90 }}>
                     <img
-                        src={`http://localhost:4000/${image}`}
+                        src={`${API_URL}/${image}`}
                         loading="lazy"
                         alt=""
                     />

@@ -9,6 +9,7 @@ import './UpdateLostCat.css'
 import LoadingSpinner from "../UI/LoadingSpinner"
 import { useContext } from "react"
 import { AuthContext } from "../../Shared/context/authContext"
+import { API_URL } from "../../Shared/hooks/config"
 
 export default function UpdateLostCat() {
     const auth = useContext(AuthContext)
@@ -42,7 +43,7 @@ export default function UpdateLostCat() {
         const fetchCat = async () => {
             try {
 
-                const responseData = await sendRequest(`http://localhost:4000/api/lost/${lostCatId}`)
+                const responseData = await sendRequest(`${API_URL}/api/lost/${lostCatId}`)
 
                 setLoadedCat(responseData.lostCat)
 
@@ -70,7 +71,7 @@ export default function UpdateLostCat() {
     const lostCatUpdateHandler = async event => {
         event.preventDefault();
 
-        await sendRequest(`http://localhost:4000/api/lost/${lostCatId}`,
+        await sendRequest(`${API_URL}/api/lost/${lostCatId}`,
             'PATCH',
             JSON.stringify({
                 name: formState.inputs.name.value,

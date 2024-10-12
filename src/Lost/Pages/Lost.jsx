@@ -4,6 +4,7 @@ import LostContentText from "../Components/LostContentText";
 import LostContentList from "../Components/LostContentList";
 import LostContentButton from "../Components/LostContentButton";
 import useHttpClient from "../../Shared/hooks/HttpHook";
+import { API_URL } from '../../Shared/hooks/config'
 import './Lost.css'
 
 import { Link } from "react-router-dom";
@@ -18,7 +19,7 @@ export default function Lost() {
         const fetchUsers = async () => {
 
             try {
-                const responseData = await sendRequest('http://localhost:4000/api/lost/lostcats')
+                const responseData = await sendRequest(`${API_URL}/api/lost/lostcats`)
 
                 setLostCatData(responseData.lostCats)
 

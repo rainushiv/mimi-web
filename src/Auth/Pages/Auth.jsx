@@ -7,6 +7,7 @@ import LoadingSpinner from '../../Lost/UI/LoadingSpinner';
 import useHttpClient from '../../Shared/hooks/HttpHook';
 import { VALIDATOR_EMAIL, VALIDATOR_MIN, VALIDATOR_MINLENGTH, VALIDATOR_REQUIRE } from '../../Lost/Components/util/validators';
 import { AuthContext } from '../../Shared/context/authContext';
+import { API_URL } from '../../Shared/hooks/config';
 import ImageUpload from '../../Shared/Components/ImageUpload';
 export default function Auth() {
     const { sendRequest, isError, isLoading, clearError } = useHttpClient()
@@ -32,7 +33,7 @@ export default function Auth() {
         if (isLoginMode) {
             try {
 
-                const responseData = await sendRequest('http://localhost:4000/api/user/login',
+                const responseData = await sendRequest(`${API_URL}/api/user/login`,
                     'POST',
                     JSON.stringify({
                         email: formState.inputs.email.value,
@@ -54,7 +55,7 @@ export default function Auth() {
                 formData.append('name', formState.inputs.username.value);
                 formData.append('password', formState.inputs.password.value);
                 formData.append('image', formState.inputs.img.value)
-                const responseData = await sendRequest('http://localhost:4000/api/user/signup',
+                const responseData = await sendRequest(`${API_URL}/api/user/signup`,
                     'POST',
                     formData
                 )

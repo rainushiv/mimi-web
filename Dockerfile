@@ -9,7 +9,9 @@ RUN npm install
 
 COPY . .
 
+RUN npm install -g serve
+
 EXPOSE 3000
 
 # Starting our application
-CMD ["npm","start"]
+CMD ["serve","-s","npm","start"]

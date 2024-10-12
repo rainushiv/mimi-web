@@ -4,7 +4,7 @@ import HomeContentButtons from "../Components/HomeContentButtons";
 import HomeContentText from "../Components/HomeContentText";
 import LoadingSpinner from "../../Lost/UI/LoadingSpinner";
 import useHttpClient from "../../Shared/hooks/HttpHook";
-
+import { API_URL } from "../../Shared/hooks/config";
 import { useEffect, useState } from "react";
 import './Home.css'
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
         const fetchUsers = async () => {
 
             try {
-                const responseData = await sendRequest('http://localhost:4000/api/lost/lostcats')
+                const responseData = await sendRequest(`${API_URL}/api/lost/lostcats`)
 
                 setLostCatData(responseData.lostCats)
 

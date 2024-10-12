@@ -8,6 +8,7 @@ import LoadingSpinner from "../UI/LoadingSpinner";
 import { AuthContext } from "../../Shared/context/authContext";
 import ImageUpload from "../../Shared/Components/ImageUpload";
 import './NewLostCat.css'
+import { API_URL } from "../../Shared/hooks/config";
 
 export default function NewLostCat() {
     const auth = useContext(AuthContext)
@@ -37,7 +38,7 @@ export default function NewLostCat() {
             formData.append('creator', auth.userId)
             formData.append('image', formState.inputs.img.value)
 
-            await sendRequest('http://localhost:4000/api/lost/addlostcat',
+            await sendRequest(`${API_URL}/api/lost/addlostcat`,
                 'POST',
                 formData,
                 { Authorization: 'Bearer ' + auth.token })

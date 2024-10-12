@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import './LostPageListItem'
 import './LostPageListItem.css'
 import { AuthContext } from '../../Shared/context/authContext'
+import { API_URL } from '../../Shared/hooks/config'
 
 export default function LostPageListItem({ items }) {
     const auth = useContext(AuthContext)
@@ -12,7 +13,7 @@ export default function LostPageListItem({ items }) {
 
             <div className='lostcatpage-container'>
                 <div className='LostCatImage-Container'>
-                    <img className='' src={`http://localhost:4000/${items.image}`}
+                    <img className='' src={`${API_URL}/${items.image}`}
                         alt="" />
                 </div>
                 <div className='LostCatDesc-Container'>

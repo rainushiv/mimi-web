@@ -6,6 +6,7 @@ import useHttpClient from "../../Shared/hooks/HttpHook"
 import UserLostCatList from '../Components/UserLostCatList'
 import './Profile.css'
 import { current } from "@reduxjs/toolkit"
+import { API_URL } from "../../Shared/hooks/config"
 export default function Profile() {
 
     const auth = useContext(AuthContext)
@@ -18,7 +19,7 @@ export default function Profile() {
 
         const fetchRequest = async () => {
             try {
-                const responseData = await sendRequest(`http://localhost:4000/api/lost/user/${auth.userId}`)
+                const responseData = await sendRequest(`${API_URL}/api/lost/user/${auth.userId}`)
                 setUserCats(responseData.lostCats)
             }
             catch (err) { }
@@ -31,7 +32,7 @@ export default function Profile() {
     useEffect(() => {
         const fetchRequest = async () => {
             try {
-                const responseData = await sendRequest(`http://localhost:4000/api/user/${auth.userId}`)
+                const responseData = await sendRequest(`${API_URL}/api/user/${auth.userId}`)
                 setCurrentUser(responseData.user)
             }
             catch (err) {

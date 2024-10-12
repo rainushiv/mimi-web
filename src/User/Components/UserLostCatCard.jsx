@@ -13,6 +13,7 @@ import useHttpClient from '../../Shared/hooks/HttpHook';
 import LoadingSpinner from '../../Lost/UI/LoadingSpinner';
 import { useContext } from 'react';
 import { AuthContext } from '../../Shared/context/authContext';
+import { API_URL } from '../../Shared/hooks/config';
 
 export default function OverflowCard({ name, id, image, place, onDelete }) {
     const auth = useContext(AuthContext)
@@ -33,7 +34,7 @@ export default function OverflowCard({ name, id, image, place, onDelete }) {
         try {
 
             await sendRequest(
-                `http://localhost:4000/api/lost/${id}`,
+                `${API_URL}/api/lost/${id}`,
                 'DELETE',
                 null, {
 
@@ -61,7 +62,7 @@ export default function OverflowCard({ name, id, image, place, onDelete }) {
                     <CardOverflow>
                         <AspectRatio ratio="1.75">
                             <img
-                                src={`http://localhost:4000/${image}`}
+                                src={`${API_URL}/ ${image}`}
                                 loading="lazy"
                                 alt=""
                             />

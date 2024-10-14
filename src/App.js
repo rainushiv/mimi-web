@@ -12,7 +12,7 @@ import Profile from './User/Pages/Profile';
 import './App.css';
 let logoutTimer;
 function App() {
-
+  console.log(process.env.REACT_APP_API_URL)
   const [userId, setUserId] = useState(null);
   const [tokenExpirationDate, setTokenExpirationDate] = useState()
   const [token, setToken] = useState(false);

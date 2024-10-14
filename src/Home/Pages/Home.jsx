@@ -31,7 +31,8 @@ export default function Home() {
         console.log(lostCatData)
 
     }, [sendRequest])
-
+    console.log(API_URL)
+    console.log(process.env.REACT_APP_API_URL)
 
     return (
         <>

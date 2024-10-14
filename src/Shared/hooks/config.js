@@ -1,2 +1,2 @@
-export const API_URL = "http://mimi.shivalry.dev" ?? "http://localhost:4000";
+export const API_URL = "https://mimi.shivalry.dev" ?? "http://localhost:4000";
 

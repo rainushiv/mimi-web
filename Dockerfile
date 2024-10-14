@@ -6,9 +6,9 @@ COPY package.json .
 
 RUN npm install
 
-ARG MIMI_API_URL
+ARG API_URL
 
-ENV REACT_APP_MIMI_API_URL=${MIMI_API_URL}
+ENV REACT_APP_API_URL=${API_URL}
 
 COPY . .
 

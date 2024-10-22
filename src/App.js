@@ -12,7 +12,7 @@ import Profile from './User/Pages/Profile';
 import './App.css';
 let logoutTimer;
 function App() {
-  console.log(import.meta.env.VITE_API_URL)
+  console.log(process.env.VITE_API_URL)
   const [userId, setUserId] = useState(null);
   const [tokenExpirationDate, setTokenExpirationDate] = useState()
   const [token, setToken] = useState(false);

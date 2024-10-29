@@ -25,7 +25,8 @@ jobs:
       - name: Super-Linter
         uses: super-linter/super-linter@v7.1.0
         env:
+          VALIDATE_JAVASCRIPT_ES: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
       - name: tells whether it succeeded 
-        run: echo "this workflows work"
+        run: echo "this workflows works"

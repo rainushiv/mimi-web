@@ -28,4 +28,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
       - name: tells whether it succeeded 
-        run: echo "this workflows works"
+        run: echo "this workflows work"
